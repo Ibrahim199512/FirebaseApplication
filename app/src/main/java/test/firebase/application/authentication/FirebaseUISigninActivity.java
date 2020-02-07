@@ -1,4 +1,4 @@
-package test.firebase.application;
+package test.firebase.application.authentication;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +17,8 @@ import com.google.firebase.auth.FirebaseUser;
 
 import java.util.Arrays;
 import java.util.List;
+
+import test.firebase.application.R;
 
 public class FirebaseUISigninActivity extends AppCompatActivity {
 

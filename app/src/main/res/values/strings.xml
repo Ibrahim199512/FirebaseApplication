@@ -4,7 +4,7 @@
     <string name="facebook_app_id">786959201781212</string>
     <string name="fb_login_protocol_scheme">fb786959201781212</string>
 
-<!--    For Firebase Ui-->
+    <!--    For Firebase Ui-->
     <string name="facebook_application_id" translatable="false">786959201781212</string>
     <string name="facebook_login_protocol_scheme" translatable="false">fb786959201781212</string>
 

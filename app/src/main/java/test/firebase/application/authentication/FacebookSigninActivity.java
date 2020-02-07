@@ -1,4 +1,4 @@
-package test.firebase.application;
+package test.firebase.application.authentication;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,7 +23,6 @@ import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
-import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
@@ -39,6 +38,8 @@ import org.json.JSONObject;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
+
+import test.firebase.application.R;
 
 public class FacebookSigninActivity extends AppCompatActivity {
 
@@ -109,7 +110,7 @@ public class FacebookSigninActivity extends AppCompatActivity {
     private void loginWithFacebook() {
 
         // Set permissions
-        LoginManager.getInstance().logInWithReadPermissions(this, Arrays.asList("email", "public_profile"));
+        LoginManager.getInstance().logInWithReadPermissions(this, Arrays.asList("public_profile"));
         // faceBookBtn.setReadPermissions(Arrays.asList("email"));
 
         LoginManager.getInstance().registerCallback(mCallbackManager, new FacebookCallback<LoginResult>() {
@@ -149,10 +150,9 @@ public class FacebookSigninActivity extends AppCompatActivity {
                                         AccessToken accessToken = AccessToken.getCurrentAccessToken();
                                         boolean isLoggedIn = accessToken != null && !accessToken.isExpired();
                                         if (isLoggedIn)
-
                                             Log.d("FacebookAccessToken", accessToken.getToken());
                                         Log.d("FacebookIsLoggedIn", isLoggedIn + "");
-                                        Log.d("FacebookAccessToken", accessToken + "");
+//                                        Log.d("FacebookAccessToken", accessToken + "");
 
                                         handleFacebookAccessToken(accessToken);
 
@@ -243,7 +243,7 @@ public class FacebookSigninActivity extends AppCompatActivity {
                 key = new String(Base64.encode(md.digest(), 0));
 
                 // String key = new String(Base64.encodeBytes(md.digest()));
-                Log.e("Key Hash=", key);
+//                Log.e("Key Hash=", key);
 
             }
         } catch (PackageManager.NameNotFoundException e1) {
