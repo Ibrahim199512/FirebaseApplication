@@ -12,18 +12,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FirebaseUISigninActivity">
+        <activity android:name=".real_time_database.FirebaseRecyclerAdapterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".EmailPasswordActivity">
+        <activity android:name=".real_time_database.RealTimeDatabaseActivity">
 
         </activity>
-        <activity android:name=".FacebookSigninActivity"></activity>
-        <activity android:name=".GoogleSigninActivity" />
+        <activity android:name=".authentication.FirebaseUISigninActivity"></activity>
+        <activity android:name=".authentication.EmailPasswordActivity"></activity>
+        <activity android:name=".authentication.FacebookSigninActivity"></activity>
+        <activity android:name=".authentication.GoogleSigninActivity"></activity>
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"

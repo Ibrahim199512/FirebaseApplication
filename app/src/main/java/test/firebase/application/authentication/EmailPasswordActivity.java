@@ -1,4 +1,4 @@
-package test.firebase.application;
+package test.firebase.application.authentication;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +19,8 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+
+import test.firebase.application.R;
 
 public class EmailPasswordActivity extends AppCompatActivity {
 

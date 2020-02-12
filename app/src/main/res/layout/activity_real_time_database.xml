@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:id="@+id/layout"
+    tools:context=".real_time_database.RealTimeDatabaseActivity">
+
+    <EditText
+        android:id="@+id/category_id"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:inputType="numberDecimal" />
+
+
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/category_id"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/add_new_category"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/title"
+        android:text="Add New Category"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/edit_new_category"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/add_new_category"
+        android:text="Edit Category"
+        android:textAllCaps="false" />
+    <Button
+        android:id="@+id/delete_new_category"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/edit_new_category"
+        android:text="Delete Category"
+        android:textAllCaps="false" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/delete_new_category"
+        android:layout_marginTop="10dp"
+        android:scrollbars="none"
+        android:visibility="visible" />
+</RelativeLayout>
