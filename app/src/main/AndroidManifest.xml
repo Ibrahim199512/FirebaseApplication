@@ -4,6 +4,7 @@
     package="test.firebase.application">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -12,6 +13,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+
+        <activity android:name=".storage.UploadFileAndImagesActivity">
+
+        </activity>
         <activity android:name=".real_time_database.FirebaseRecyclerAdapterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,10 +28,18 @@
         <activity android:name=".real_time_database.RealTimeDatabaseActivity">
 
         </activity>
-        <activity android:name=".authentication.FirebaseUISigninActivity"></activity>
-        <activity android:name=".authentication.EmailPasswordActivity"></activity>
-        <activity android:name=".authentication.FacebookSigninActivity"></activity>
-        <activity android:name=".authentication.GoogleSigninActivity"></activity>
+        <activity android:name=".authentication.FirebaseUISigninActivity" />
+        <activity android:name=".authentication.EmailPasswordActivity">
+
+        </activity>
+
+        <activity android:name=".authentication.FacebookSigninActivity">
+
+        </activity>
+
+        <activity android:name=".authentication.GoogleSigninActivity">
+
+        </activity>
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"

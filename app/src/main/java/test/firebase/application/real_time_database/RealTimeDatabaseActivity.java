@@ -181,6 +181,7 @@ public class RealTimeDatabaseActivity extends AppCompatActivity {
             mDatabase.child("category").addValueEventListener(postListener);
         else
             mDatabase.child("category").addListenerForSingleValueEvent(postListener);
+
     }
 
 
