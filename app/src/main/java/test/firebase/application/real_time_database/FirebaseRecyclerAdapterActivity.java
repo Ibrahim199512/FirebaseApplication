@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -79,9 +80,12 @@ public class FirebaseRecyclerAdapterActivity extends AppCompatActivity {
                             @NonNull
                             @Override
                             public Category parseSnapshot(@NonNull DataSnapshot snapshot) {
+                                Log.e("enter",""+snapshot.child("categoryId").getValue().toString());
+
                                 return new Category(snapshot.child("categoryId").getValue().toString(),
                                         snapshot.child("categoryTitle").getValue().toString(),
                                         snapshot.child("categoryImageUrl").getValue().toString());
+
                             }
                         })
                         .build();

@@ -128,6 +128,14 @@ public class EmailPasswordActivity extends AppCompatActivity {
         // [END sign_in_with_email]
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        updateUI(currentUser);
+    }
+
     private void updateUI(FirebaseUser user) {
         if (user != null) {
             createSuccessSnackbar(findViewById(R.id.layout), "The Email is: " + user.getEmail()).show();
