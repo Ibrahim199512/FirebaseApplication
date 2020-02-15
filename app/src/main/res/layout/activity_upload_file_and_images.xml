@@ -1,17 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/layout"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_marginTop="36dp"
+    android:layout_marginBottom="36dp"
     tools:context=".storage.UploadFileAndImagesActivity">
+
 
     <TextView
         android:id="@+id/add_image"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:layout_centerInParent="true"
         android:text="Add Image"
+        android:gravity="center_vertical"
         android:textSize="25sp"/>
-</RelativeLayout>
+    <TextView
+        android:id="@+id/read_images"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:layout_centerInParent="true"
+        android:text="Read Images"
+        android:layout_below="@id/add_image"
+        android:textSize="25sp"/>
+    <TextView
+        android:id="@+id/edit_image"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:layout_centerInParent="true"
+        android:text="Edit Image"
+        android:layout_below="@id/add_image"
+        android:textSize="25sp"/>
+    <TextView
+        android:id="@+id/delete_image"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:layout_centerInParent="true"
+        android:text="Delete Image"
+        android:layout_below="@id/add_image"
+        android:textSize="25sp"/>
+</LinearLayout>

@@ -81,11 +81,11 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     }
 
     //This method is only generating push notification
-    private void sendNotification(String messageTitle, String messageBody, int status) {
+    private void sendNotification(String messageTitle, String messageBody, int type) {
 
         PendingIntent contentIntent = null;
         Intent intent = null;
-        switch (status) {
+        switch (type) {
             case 0:
                 intent = new Intent(this, GoogleSigninActivity.class);
                 break;
@@ -99,7 +99,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         contentIntent = PendingIntent.getActivity(this, 0 /* request code */, intent, PendingIntent.FLAG_UPDATE_CURRENT);
         NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+//        Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         CharSequence tickerText = messageBody;
 
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this, "M_CH_ID");
@@ -110,7 +110,6 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 .setContentTitle(messageTitle)
                 .setContentText(messageBody)
                 .setContentIntent(contentIntent)
-                .setAutoCancel(true)
                 .setStyle(new NotificationCompat.BigTextStyle()
                         .bigText(tickerText));
 

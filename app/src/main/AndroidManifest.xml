@@ -13,14 +13,16 @@
         android:roundIcon="@drawable/ic_fingerprint_24px"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FCMActivity">
+        <activity android:name=".fcm.FCMActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".storage.UploadFileAndImagesActivity"></activity>
+        <activity android:name=".storage.UploadFileAndImagesActivity">
+
+        </activity>
         <activity android:name=".real_time_database.FirebaseRecyclerAdapterActivity">
 
         </activity>
