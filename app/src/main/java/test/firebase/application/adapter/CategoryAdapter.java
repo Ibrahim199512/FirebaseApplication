@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-import test.firebase.application.Modules.Category;
+import test.firebase.application.modules.Category;
 import test.firebase.application.R;
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyViewHolder> {

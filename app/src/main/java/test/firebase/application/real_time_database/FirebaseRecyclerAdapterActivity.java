@@ -21,7 +21,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 
-import test.firebase.application.Modules.Category;
+import test.firebase.application.modules.Category;
 import test.firebase.application.R;
 
 public class FirebaseRecyclerAdapterActivity extends AppCompatActivity {

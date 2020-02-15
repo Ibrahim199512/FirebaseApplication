@@ -8,38 +8,27 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_fingerprint_24px"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/ic_fingerprint_24px"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-
-        <activity android:name=".storage.UploadFileAndImagesActivity">
-
-        </activity>
-        <activity android:name=".real_time_database.FirebaseRecyclerAdapterActivity">
+        <activity android:name=".FCMActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".real_time_database.RealTimeDatabaseActivity">
+        <activity android:name=".storage.UploadFileAndImagesActivity"></activity>
+        <activity android:name=".real_time_database.FirebaseRecyclerAdapterActivity">
 
         </activity>
+        <activity android:name=".real_time_database.RealTimeDatabaseActivity"></activity>
         <activity android:name=".authentication.FirebaseUISigninActivity" />
-        <activity android:name=".authentication.EmailPasswordActivity">
-
-        </activity>
-
-        <activity android:name=".authentication.FacebookSigninActivity">
-
-        </activity>
-
-        <activity android:name=".authentication.GoogleSigninActivity">
-
-        </activity>
+        <activity android:name=".authentication.EmailPasswordActivity"></activity>
+        <activity android:name=".authentication.FacebookSigninActivity"></activity>
+        <activity android:name=".authentication.GoogleSigninActivity"></activity>
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
@@ -62,6 +51,29 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".firebase_utils.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+
+        <!-- &lt;!&ndash; Set custom default icon. This is used when no icon is set for incoming notification messages. -->
+        <!-- See README(https://goo.gl/l4GJaQ) for more. &ndash;&gt; -->
+        <!-- <meta-data -->
+        <!-- android:name="com.google.firebase.messaging.default_notification_icon" -->
+        <!-- android:resource="@drawable/ic_launcher_foreground" /> -->
+        <!-- &lt;!&ndash; Set color used with incoming notification messages. This is used when no color is set for the incoming -->
+        <!-- notification message. See README(https://goo.gl/6BKBk7) for more. &ndash;&gt; -->
+        <!-- <meta-data -->
+        <!-- android:name="com.google.firebase.messaging.default_notification_color" -->
+        <!-- android:resource="@color/colorAccent" /> -->
+        <!--        <meta-data-->
+        <!--            android:name="com.google.firebase.messaging.default_notification_channel_id"-->
+        <!--            android:value="@string/default_notification_channel_id" />-->
     </application>
 
 </manifest>

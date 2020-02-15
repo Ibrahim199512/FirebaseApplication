@@ -1,4 +1,4 @@
-package test.firebase.application.Modules;
+package test.firebase.application.modules;
 
 import com.google.firebase.database.Exclude;
 import com.google.firebase.database.IgnoreExtraProperties;
