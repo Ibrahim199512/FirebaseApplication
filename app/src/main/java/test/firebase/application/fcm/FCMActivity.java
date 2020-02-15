@@ -1,4 +1,4 @@
-package test.firebase.application;
+package test.firebase.application.fcm;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,7 @@ import android.util.Log;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.firebase.FirebaseApp;
 
+import test.firebase.application.R;
 import test.firebase.application.authentication.GoogleSigninActivity;
 import test.firebase.application.real_time_database.RealTimeDatabaseActivity;
 import test.firebase.application.storage.UploadFileAndImagesActivity;
@@ -28,16 +29,13 @@ public class FCMActivity extends AppCompatActivity {
                 Log.e("type", getIntent().getExtras().getString("type") + "");
                 openWithNotification(getIntent().getExtras().getString("type"));
             } else {
-                openWithoutNotification();
+                //Regular Case
             }
         } else {
-            openWithoutNotification();
+            //Regular Case
         }
 
 
-    }
-
-    private void openWithoutNotification() {
     }
 
     private void openWithNotification(String type) {
@@ -53,5 +51,6 @@ public class FCMActivity extends AppCompatActivity {
                 intent = new Intent(this, UploadFileAndImagesActivity.class);
         }
         startActivity(intent);
+        finish();
     }
 }
